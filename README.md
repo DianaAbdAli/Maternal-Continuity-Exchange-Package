@@ -1,5 +1,3 @@
-# Maternal-Continuity-Exchange-Package
-Supplementary thesis repository for the Maternal Continuity Exchange Package, including MCEP structure, postpartum GDM example and FHIR R4 mapping.
 # Maternal Continuity Exchange Package
 
 This repository contains supplementary design artifacts developed for a master’s thesis on workflow-informed semantic interoperability for improving continuity of care across the maternal care continuum.
