@@ -1,0 +1,201 @@
+{
+  "envelope": {
+    "artifactType": "MCEP",
+    "artifactVersion": "1.0",
+    "profile": "postpartum-gdm-continuity",
+    "generatedDate": "2026-03-31T10:30:00Z",
+    "useCase": "Postpartum handoff from obstetric care to primary care after gestational diabetes mellitus",
+    "exchangeCareStage": "postpartum",
+    "sendingOrganization": "Example Women and Birth Hospital",
+    "receivingOrganization": "Example Family Medicine Clinic",
+    "sourceSystem": "Example Hospital EHR"
+  },
+  "subject": {
+    "personId": "MCEP-PAT-0001",
+    "localIds": [
+      {
+        "system": "hospital-mrn",
+        "value": "WH-204583"
+      }
+    ],
+    "fullName": "Sara Ahmed",
+    "dateOfBirth": "1992-08-14",
+    "sex": "female",
+    "contactInfo": {
+      "phone": "+971-50-555-0184"
+    },
+    "nationality": "UAE",
+    "residenceRegion": "Dubai"
+  },
+  "maternalEpisodeContext": {
+    "episodeId": "MCEP-EP-2025-GDM-001",
+    "pregnancyStatus": "delivered",
+    "careStage": "postpartum",
+    "estimatedDueDate": "2026-04-05",
+    "deliveryDate": "2026-03-30",
+    "pregnancyOutcome": "live birth",
+    "managingOrganization": "Example Women and Birth Hospital"
+  },
+  "clinicalSummary": {
+  "conditions": [
+    {
+      "conditionId": "COND-001",
+      "code": "gestational-diabetes-mellitus",
+      "display": "Gestational diabetes mellitus",
+      "clinicalStatus": "resolved",
+      "verificationStatus": "confirmed",
+      "onsetDate": "2025-11-18",
+      "stageOfRelevance": "postpartum",
+      "recordedDate": "2025-11-18",
+      "recorder": "obstetric-team",
+      "note": "Pregnancy complicated by GDM requiring active monitoring during pregnancy."
+    }
+  ],
+  "obstetricHistory": {
+   "gravidity": 1,
+  "parity": 1,
+  "historyNote": "This is the first documented pregnancy and it was complicated by gestational diabetes mellitus."
+  },
+  "keyObservations": [
+    {
+      "observationId": "OBS-001",
+      "code": "body-mass-index",
+      "display": "Body mass index",
+      "value": 29.4,
+      "unit": "kg/m2",
+      "effectiveDate": "2026-03-30",
+      "interpretation": "abnormal",
+      "stageOfRelevance": "postpartum",
+      "recordedDate": "2026-03-30",
+      "recorder": "obstetric-team",
+      "note": "Postpartum BMI remains relevant to metabolic follow-up planning."
+    }
+  ],
+  "keyResults": [
+    {
+      "resultId": "RES-001",
+      "code": "oral-glucose-tolerance-test",
+      "display": "Oral glucose tolerance test in pregnancy",
+      "value": "abnormal",
+      "unit": "n/a",
+      "effectiveDate": "2025-11-18",
+      "resultType": "laboratory",
+      "interpretation": "abnormal",
+      "referenceRange": "Pregnancy diagnostic thresholds",
+      "stageOfRelevance": "postpartum",
+      "recordedDate": "2025-11-18",
+      "recorder": "obstetric-team",
+      "note": "Diagnostic pregnancy glucose result supporting the diagnosis of gestational diabetes mellitus."
+    }
+  ],
+  "medications": [
+    {
+      "medicationId": "MED-001",
+      "code": "insulin",
+      "display": "Insulin therapy during pregnancy",
+      "status": "stopped",
+      "dose": "Pregnancy regimen per source record",
+      "route": "subcutaneous",
+      "frequency": "as prescribed",
+      "startDate": "2025-11-20",
+      "endDate": "2026-03-30",
+      "stageOfRelevance": "postpartum",
+      "recordedDate": "2026-03-30",
+      "recorder": "obstetric-team",
+      "note": "Pregnancy-related insulin treatment stopped after delivery."
+    }
+  ],
+  "allergies": [],
+  "procedures": [],
+  "documents": [
+    {
+      "documentId": "DOC-001",
+      "documentType": "discharge-summary",
+      "title": "Postpartum discharge summary",
+      "status": "current",
+      "authorOrganization": "Example Women and Birth Hospital",
+      "creationDate": "2026-03-31",
+      "stageOfRelevance": "postpartum",
+      "language": "en",
+      "linkReference": "doc://postpartum-discharge-summary-001",
+      "note": "Contains discharge recommendations and postpartum follow-up instructions."
+    }
+  ]
+},
+"riskInterpretation": {
+  "riskItems": [
+    {
+      "riskId": "RISK-001",
+      "riskType": "metabolic",
+      "display": "Postpartum dysglycaemia and future diabetes risk after GDM",
+      "riskLevel": "moderate",
+      "basis": "Confirmed gestational diabetes mellitus during pregnancy with abnormal glucose testing and pregnancy treatment history.",
+      "timeHorizon": "long-term",
+      "clinicalMeaning": "The woman remains at elevated risk of postpartum dysglycaemia and future type 2 diabetes, so follow-up must continue after discharge rather than ending with the birth episode.",
+      "recommendedAttention": "planned-follow-up",
+      "dueBy": "2026-05-11",
+      "stageOfRelevance": "postpartum",
+      "recordedDate": "2026-03-31",
+      "recorder": "obstetric-team",
+      "note": "Risk should remain visible to primary care at the time of handoff."
+    }
+  ],
+  "riskSummary": "Pregnancy was complicated by gestational diabetes mellitus. Although the pregnancy has ended, metabolic follow-up remains necessary in primary care because postpartum dysglycaemia and longer-term diabetes risk remain clinically relevant."
+},
+"followUpPlanAndResponsibility": {
+  "followUpItems": [
+    {
+      "followUpId": "FU-001",
+      "actionType": "laboratory-test",
+      "display": "Postpartum glucose reassessment",
+      "status": "requested",
+      "dueBy": "2026-05-11",
+      "responsibleActor": "primary-care-physician",
+      "responsibleOrganization": "Example Family Medicine Clinic",
+      "triggerReason": "Prior gestational diabetes mellitus in the index pregnancy.",
+      "linkedRisk": "RISK-001",
+      "stageOfRelevance": "postpartum",
+      "recordedDate": "2026-03-31",
+      "recorder": "obstetric-team",
+      "note": "Primary care follow-up should include postpartum glucose testing within the expected postpartum follow-up window."
+    },
+    {
+      "followUpId": "FU-002",
+      "actionType": "primary-care-follow-up",
+      "display": "Primary care review of postpartum metabolic risk",
+      "status": "requested",
+      "dueBy": "2026-05-11",
+      "responsibleActor": "primary-care-physician",
+      "responsibleOrganization": "Example Family Medicine Clinic",
+      "triggerReason": "Need to continue metabolic risk follow-up after obstetric discharge.",
+      "linkedRisk": "RISK-001",
+      "stageOfRelevance": "postpartum",
+      "recordedDate": "2026-03-31",
+      "recorder": "obstetric-team",
+      "note": "Responsibility for ongoing metabolic follow-up transfers to primary care after discharge."
+    }
+  ],
+  "responsibilitySummary": "At discharge, obstetric care closes the birth-related episode, but responsibility for postpartum metabolic follow-up passes to primary care. The receiving primary care physician is expected to ensure postpartum glucose reassessment and ongoing risk-aware follow-up."
+},
+"handoffContext": {
+  "handoffReason": "Postpartum discharge after pregnancy complicated by gestational diabetes mellitus, with need for ongoing metabolic follow-up in primary care.",
+  "sendingContext": "Obstetric or postpartum hospital team",
+  "receivingContext": "Primary care physician",
+  "transitionType": "obstetric-to-primary-care",
+  "urgency": "routine",
+  "handoffSummary": "The woman is being discharged from obstetric care after delivery. Because the pregnancy was complicated by gestational diabetes mellitus, postpartum glucose follow-up and continued metabolic risk awareness must be preserved in primary care."
+},
+  "relatedRecords": {},
+  "provenance": {
+  "authorRole": "obstetric-team",
+  "authorOrganization": "Example Women and Birth Hospital",
+  "sourceEncounterId": "ENC-POSTPARTUM-001",
+  "sourceSystemReference": "EHR-PPD-2026-0001",
+  "verificationNote": "Package generated from the postpartum discharge context and reviewed by the responsible obstetric team."
+},
+"narrativeSummary": {
+  "summaryText": "Woman discharged from obstetric care after delivery following a pregnancy complicated by gestational diabetes mellitus. Postpartum and longer-term metabolic follow-up remain necessary. Primary care is expected to arrange postpartum glucose reassessment and continue risk-aware follow-up after discharge.",
+  "summaryFocus": "risk-and-follow-up",
+  "summaryDate": "2026-03-31"
+}
+}
